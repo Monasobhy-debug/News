@@ -1,7 +1,8 @@
-// import 'dart:async';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'newsItem.dart';
 import 'package:news/services/newsAPI.dart';
+import 'package:news/model/article_model.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -10,6 +11,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List articles = [];
+  // Timer timer;
   void getData() async {
     NewsApi newsApi = NewsApi();
     // while (articles.isEmpty)
@@ -27,7 +29,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    // getData();
+    // timer = Timer.periodic(Duration(seconds: 3), (timer) => getData());
+    getData();
   }
 
   @override
