@@ -35,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    getData();
     // print(articles[1].title);
     // print(articles[1].imageUrl);
     // print(articles[1].description);
